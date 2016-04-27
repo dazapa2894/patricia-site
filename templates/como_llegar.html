@@ -1,0 +1,86 @@
+{% load staticfiles %}
+<section id="llegar">
+	<div class="container">
+		<div class="big-title">
+			¿CÓMO LLEGAR?
+			<div class="separador"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+
+				<div id="map_canvas"></div>
+			
+				<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false">
+				</script>
+
+				<script>
+					function initialize(){
+					    var latlng = new google.maps.LatLng(3.463332, -76.523021);
+					    var myOptions =
+					    {
+					        zoom: 18,
+					        center: latlng,
+					        mapTypeId: google.maps.MapTypeId.ROADMAP
+					    };
+
+					    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+					    var myMarker = new google.maps.Marker(
+					    {
+					        position: latlng,
+					        map: map,
+					        title:"Centro Médico Hipócrates"
+					   });
+					}
+				</script>
+
+			</div><!-- end col-->
+		</div><!-- end row-->
+
+		<div class="row">
+			<div class="llegar-title">
+				Desde el MIO
+			</div>
+			<div class="llegar-text">
+				Si va a venir a su cita en transporte masivo, debe llegar a la estación “Avenida de las Américas” la cual es la más cercana a la institución. Debe salir de la estación y cruzar a la izquierda para pasar la calle 3era norte y seguir por la calle 23a Norte. 
+			</div>
+			<div class="llegar-text">
+				En la calle 23a Norte verás que la calle se divide en dos, también podrás ver la Embajada de España. Debes seguir caminando por el andén de la calle de la izquierda que se convertirá en la Avenida 2c Norte.
+			</div>
+			<div class="llegar-text">
+				Continúa caminado por el anden y, llegando casi a la calle 25 Norte, en el andén de la derecha podrás ver el edificio. 
+			</div>
+		</div>
+	</div><!-- end container -->
+
+		<div class="separador-seccion" style="margin: 50px auto;"></div>
+
+	<div class="container">
+		<div class="row">
+			<div class="llegar-title">
+				Desde la terminal de transporte
+			</div>
+			<div class="llegar-text">
+				Una ves llegues a la terminal de transporte, debes salir hacia el lado de la calle 25 norte, este es el lado en el que se puede ver “La Clínica Nuestra Señora de los Remedios”. 
+			</div>
+			<div class="llegar-text">
+				Cuando estés fuera del terminal y puedas ver al otro lado de la calle la clínica debes cruzar la calle hasta el otro lado. Debes caminar en el andén de la calle 25 Norte hacia la clínica y en la esquina antes de la clinica verás un panadería y al otro lado un Comfandi. Esa es la Avenida 2c Norte.
+			</div>
+			<div class="llegar-text">
+				Continúa caminando por la calle 2c Norte unos cuantos metros y, a tu izquierda en el andén de en frente podrás ver el edificio.  
+			</div>
+		</div>
+	</div><!-- end container -->
+	
+	<div class="separador-seccion" style="margin: 50px auto;"></div>
+
+	<div class="container">
+		<div class="llegar-title" style="text-align: center;">
+			El edificio no ofrece servicio de parquedero
+		</div>
+		<div class="llegar-text" style="text-align: center;">
+			El edificio no ofrece servicio de parqueadero para los visitantes. Existen parqueaderos cercanos pero no hacen parte de la institución. Si va a traer vehículo tenga en cuenta esta información.
+		</div>
+	</div>
+
+</section>
